@@ -1,0 +1,123 @@
+/*-- header*/
+.navbar{
+	margin-bottom:  0;
+}
+.jumbotrom{
+	background: #1003bc;
+	color: #fff;
+	padding: 25px 0;
+}
+.jumbotrom .titulo{
+	font-size: 75px;
+}
+/*--post--*/
+.main {
+	margin-top:20x;
+	margin-bottom:20x; 
+}
+.post{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #999;
+}
+.post .post-title a{
+	color:#74dd18; 
+}
+.post .post-contenido{
+	color: #d7f20e;
+}
+.post .thumb{
+	margin-right: 10px;
+	width: 40%;
+}
+.post .thumb img{
+	width: 100%;
+}
+.post .contenedores-botones{
+	width: 100%;
+}
+/*-- media queri*/
+@media screen and(max-width:768px) {
+	.post .thumb {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+	
+}
+.nav li ul{
+ display:  none;
+}
+
+.nav li:hover > ul{
+ display:  block;
+}
+/*--  slider*/
+.slider{
+	width:40%;
+	height: 80%;
+	margin:auto;
+	overflow: hidden;
+}
+.slider ul{
+	display: flex;
+	padding:0;
+	width: 400%; 
+	animation: cambio 10s infinite;
+	animation-direction: alternate;
+}
+.slider li{
+	width: 100%;
+	list-style: none;
+}
+.slider img{
+	width: 100%;
+}
+@keyframes cambio{
+	0%{margin-left: 0;}
+	20%{margin-left: 0;}
+
+	25%{margin-left: -100%;}
+	45%{margin-left: -100%;}
+
+	50%{margin-left: -200%;}
+	70%{margin-left: -200%;}
+
+	75%{margin-left: -300%;}
+	100%{margin-left: -300%;}
+}
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo, 
+		pero de esta manera (siempre que no le demos padding), 
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 52px;
+	font-size: 2rem;
+	
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+blockquote:before {
+  content: "«";
+}
+blockquote:after {
+  content: "»";
+}
